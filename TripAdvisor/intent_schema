@@ -1,0 +1,171 @@
+{
+  "languageModel": {
+    "types": [
+      {
+        "name": "VISITING_PLACE_NAMES",
+        "values": [
+          {
+            "id": null,
+            "name": {
+              "value": "Taj Mahal",
+              "synonyms": [
+                "taj mahal",
+                "tajmahal"
+              ]
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "red fort",
+              "synonyms": [
+                "red fort",
+                "redfort"
+              ]
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "akshardhaam",
+              "synonyms": [
+                "akshar dhaam",
+                "akshardham"
+              ]
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "india gate",
+              "synonyms": [
+                "indiagate",
+                "india gate"
+              ]
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "qutub minar",
+              "synonyms": [
+                "qutub minar"
+              ]
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "lal bagh",
+              "synonyms": [
+                "lal bagh",
+                "lalbagh"
+              ]
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "iscon",
+              "synonyms": [
+                "iscon temple",
+                "iscon"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "intents": [
+      {
+        "name": "AMAZON.CancelIntent",
+        "samples": []
+      },
+      {
+        "name": "AMAZON.HelpIntent",
+        "samples": []
+      },
+      {
+        "name": "AMAZON.StopIntent",
+        "samples": []
+      },
+      {
+        "name": "BestTouristPlaceIntent",
+        "samples": [
+          "which is best tourist place in {CityName}",
+          "best places to visit in {CityName}",
+          "where can i go in {CityName}",
+          "tell me places to go in {CityName}",
+          "tell me places to see in {CityName}",
+          "places to see in {CityName}",
+          "places to go in {CityName}",
+          "visiting places in {CityName}",
+          "best tourist spot in {CityName}",
+          "what should i see or visit in {CityName}",
+          "how is {CityName}",
+          "tell me about {CityName}",
+          "what should i see in {CityName}",
+          "must to visit places in {CityName}",
+          "must watch places in {CityName}",
+          "never miss places in {CityName}"
+        ],
+        "slots": [
+          {
+            "name": "CityName",
+            "type": "AMAZON.City",
+            "samples": [
+              "{CityName}",
+              "i am traveling to {CityName}",
+              "i am going to {CityName}",
+              "i am visiting to {CityName}"
+            ]
+          }
+        ]
+      }
+    ],
+    "invocationName": "trip advisor"
+  },
+  "prompts": [
+    {
+      "id": "Elicit.Intent-BestTouristPlaceIntent.IntentSlot-CityName",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "Tell me city name"
+        },
+        {
+          "type": "PlainText",
+          "value": "which city you are visiting"
+        },
+        {
+          "type": "PlainText",
+          "value": "city name"
+        },
+        {
+          "type": "PlainText",
+          "value": "tell me city name please"
+        }
+      ]
+    }
+  ],
+  "dialog": {
+    "intents": [
+      {
+        "name": "BestTouristPlaceIntent",
+        "confirmationRequired": false,
+        "prompts": {},
+        "slots": [
+          {
+            "name": "CityName",
+            "type": "AMAZON.City",
+            "elicitationRequired": true,
+            "confirmationRequired": false,
+            "prompts": {
+              "elicitation": "Elicit.Intent-BestTouristPlaceIntent.IntentSlot-CityName"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
