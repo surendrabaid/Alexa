@@ -1,0 +1,60 @@
+{
+  "languageModel": {
+    "intents": [
+      {
+        "name": "AMAZON.CancelIntent",
+        "samples": []
+      },
+      {
+        "name": "AMAZON.HelpIntent",
+        "samples": []
+      },
+      {
+        "name": "AMAZON.StopIntent",
+        "samples": []
+      },
+      {
+        "name": "BlessToGuestIntent",
+        "samples": [
+          "bless my guests",
+          "bless my guest",
+          "greet my guest",
+          "greet my guests",
+          "greet my friend",
+          "bless my friend",
+          "bless my kid",
+          "give blessing to my guests",
+          "give blessings to my kid",
+          "give blessings to my family",
+          "give blessings to my friends",
+          "give blessings to us",
+          "bless to us",
+          "bless us",
+          "greet us",
+          "wish happy new year",
+          "wish new year to us",
+          "wish happy new year to us",
+          "say happy new year"
+        ],
+        "slots": []
+      },
+      {
+        "name": "HoroscopeIntent",
+        "samples": [
+          "How will be two thousand eighteen for me",
+          "how is two thousand eighteen for me",
+          "how's two thousand eighteen for me",
+          "how will be new year for me",
+          "how will be this year",
+          "how will be new year",
+          "how will be near year for my family",
+          "tell me about new year",
+          "tell me about my life in new year",
+          "my horoscope for two thousand eighteen"
+        ],
+        "slots": []
+      }
+    ],
+    "invocationName": "my fairy"
+  }
+}
